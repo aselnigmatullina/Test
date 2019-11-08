@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "https://aselnigmatullina.github.io/Apple-less/",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aselnigmatullina/Apple-less.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aselnigmatullina/Apple-less/issues"
+  },
+  "homepage": "https://github.com/aselnigmatullina/Apple-less#readme"
+}

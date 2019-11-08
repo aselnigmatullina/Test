@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Жучки</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width , initial-scale = 1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="beetle">
+                    <div class="beetle__avatar"><img src="images/1.png" alt="" width="180"></div>
+                    <div class="beetle__content">
+                        <div class="beetle__name">Где мой любимый камушек... :(</div>
+                    </div>
+            </div>
+                <nav class="nav">
+                    <btn class="nav__link" id="nav">Задача о жучках</btn>
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">
+                                &times;
+                            </span>
+                            <p class="modal__title">Описание задачи</p>
+                            <br>
+                            Жуки не любят находиться рядом друг с другом и каждый прячется под отдельным камнем и старается выбирать камни, максимально удаленные от соседей. Так же жуки любят находится максимально далеко от края. Как только жук сел за камень, он более не перемещается. Всего в линии лежат X камней. И туда последовательно бежит прятаться Y жуков. Найти сколько свободных камней будет слева и справа от последнего жука.
+                            <br>
+                            <br>
+                            X может быть до 4 млрд.
+                            <div class="help">
+                            <img class="modal__image" src="images/1.jpg" alt="" width="100">
+                            </div>
+                        </div>
+                    </div>
+            </nav>
+
+            </div>
+        </div>
+    </header>
+    <div class="solution">
+        <div class="container">
+            <div class="solution__box">
+                <div class="solution__image"><img src="images/2.png" alt="" width="100"></div>
+                <div class="solution__title" id="solution__title">Решение</div>
+                <div class="solution__text">
+                    <p>
+                 Для начала нужно создать массив свободных от жуков камней. Допустим, изначально имеем 8 свободных камней. Возьмем самый большой кусок массива, то есть 5 камней(это у нас будет левая часть, в правой части остается 3 камня). Один камень от этого левого куска отдаем жучку. Также делаем проверку: если левый кусок камней нечетный, то его округляем в большую сторону, а правый в меньшую, если же, наоборот, то левый кусок округляем в меньшую сторону, а правый в большую. Вставляем в конец массива оба куска, причем левый кусок вставляем в первую очередь, а второй кусок во вторую очередь. С каждым новым жучком повторяем процесс.
+                    </p>
+                    <div class="first__line">
+                        <img src="images/4.png" alt="" class="circle-1" width="50">
+                        <img src="images/4.png" alt="" class="circle-2" width="50">
+                        <img src="images/4.png" alt="" class="circle-3" width="50">
+                        <img src="images/4.png" alt="" class="circle-4" width="50">
+                        <img src="images/5.png" alt="" class="circle-5" width="50">
+                        <img src="images/4.png" alt="" class="circle-6" width="50">
+                        <img src="images/4.png" alt="" class="circle-7" width="50">
+                        <img src="images/4.png" alt="" class="circle-8" width="50">
+
+
+
+                    </div>
+                    <div class="second__line">
+                            <img src="images/4.png" alt="" class="circle-1" width="50">
+                            <img src="images/4.png" alt="" class="circle-2" width="50">
+                            <img src="images/4.png" alt="" class="circle-3" width="50">
+                            <img src="images/5.png" alt="" class="circle-4" width="50">
+                            <img src="images/4.png" alt="" class="circle-5" width="50">
+                            <img src="images/5.png" alt="" class="circle-6" width="50">
+                            <img src="images/4.png" alt="" class="circle-7" width="50">
+                            <img src="images/4.png" alt="" class="circle-8" width="50">
+
+                    </div>
+                    <div class="third__line">
+                            <img src="images/4.png" alt="" class="circle-1" width="50">
+                            <img src="images/4.png" alt="" class="circle-2" width="50">
+                            <img src="images/5.png" alt="" class="circle-3" width="50">
+                            <img src="images/4.png" alt="" class="circle-4" width="50">
+                            <img src="images/5.png" alt="" class="circle-5" width="50">
+                            <img src="images/4.png" alt="" class="circle-6" width="50">
+                            <img src="images/5.png" alt="" class="circle-7" width="50">
+                            <img src="images/4.png" alt="" class="circle-8" width="50">
+
+                    </div>
+                    <div class="fourth__line">
+                            <img src="images/4.png" alt="" class="circle-1" width="50">
+                            <img src="images/5.png" alt="" class="circle-2" width="50">
+                            <img src="images/4.png" alt="" class="circle-3" width="50">
+                            <img src="images/5.png" alt="" class="circle-4" width="50">
+                            <img src="images/4.png" alt="" class="circle-5" width="50">
+                            <img src="images/5.png" alt="" class="circle-6" width="50">
+                            <img src="images/4.png" alt="" class="circle-7" width="50">
+                            <img src="images/5.png" alt="" class="circle-8" width="50">
+
+                    </div>
+                    <div class="fifth__line">
+                            <img src="images/5.png" alt="" class="circle-1" width="50">
+                            <img src="images/4.png" alt="" class="circle-2" width="50">
+                            <img src="images/5.png" alt="" class="circle-3" width="50">
+                            <img src="images/4.png" alt="" class="circle-4" width="50">
+                            <img src="images/5.png" alt="" class="circle-5" width="50">
+                            <img src="images/4.png" alt="" class="circle-6" width="50">
+                            <img src="images/5.png" alt="" class="circle-7" width="50">
+                            <img src="images/4.png" alt="" class="circle-8" width="50">
+
+                    </div>
+                </div>
+                <div class="solution__tolk">
+                    <img src="images/2.png" alt="" class="solution__beetle-1" width="50"><span class="solution__beetle-talk1">Отошел отсюда</span>
+                    <img src="images/3.png" alt="" class="solution__stone" width="100">
+                    <img src="images/1.png" alt="" class="solution__beetle-2" width="50"><span class = "solution__beetle-talk2">Это ты отошел</span>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="result">
+        <div class="container">
+            <div class="helper">
+            <button class="result__button" id="result__button">Результат</button> <br>
+            <span class="result__text"> Нажми на кнопку, чтобы увидеть результат </span>
+            <div id="result__modal" class="result__modal">
+                    <div class="result__modal-content">
+                        <span class="result__close">
+                            &times;
+                        </span>
+                        <p class="result__modal__title">Результат <img class="result__modal__image" src="images/2.png" alt="" width="70"></p>
+                        
+                        <br>
+                        <div id="result__solution">       
+                    </div>
+                </div>
+            </div>
+            
+            <img src="images/2.png" alt="" class="result__image" width="50"> 
+        </div>
+    </div>
+    <script src="secondTask.js"></script>
+</body>
+</html>
