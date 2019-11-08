@@ -39,7 +39,7 @@ const func = (X, Y) => {
         (looseStones[looseStones.length-1]<right)? looseStones.push(right, looseStones.pop()):looseStones.push(right)
         looseStones.push(left);
         if(Y > 4e9){
-            throw "Error"
+            throw Error('to much beetles')
         }
        }
        return [left,right];
